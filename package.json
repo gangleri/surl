@@ -21,5 +21,12 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gangleri/surl/issues"
+  },
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.10.0"
+  },
+  "dependencies": {
+    "level": "~0.16.0"
   }
 }
