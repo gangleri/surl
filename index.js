@@ -1,6 +1,6 @@
 var level = require('level'),
     hooks = require('level-hooks'),
-    base64 = require('./lib/base64');
+    base64 = require('./lib/bijection')();
 
 var db;
 var maxId;
