@@ -1,14 +1,9 @@
 {
   "name": "surl",
+  "main": "index.js",
   "version": "0.0.1",
   "description": "A shorter url.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "mocha ./test/test.js",
-    "predeploy": "echo This will be run before deploying the app",
-    "postdeploy": "echo This will be run after deploying the app"
-  },
+  "homepage": "https://github.com/gangleri/surl",
   "repository": {
     "type": "git",
     "url": "git://github.com/gangleri/surl.git"
@@ -17,16 +12,19 @@
     "url",
     "shortener"
   ],
+  "dependencies": {
+    "level": "~0.16.0",
+    "level-hooks": "~4.4.4"
+  },
+  "devDependencies": {
+    "unerscore": "~1.5.2"
+  },
   "author": "Alan Bradley, Eoin Brazil, Leo Moore",
+  "scripts": {
+    "test": "set -e; rm -rf ./test-db; for t in test/*.js; do echo '***' $t '***'; node $t; done"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gangleri/surl/issues"
-  },
-  "devDependencies": {
-    "should": "~1.2.2",
-    "mocha": "~1.10.0"
-  },
-  "dependencies": {
-    "level": "~0.16.0"
   }
 }
