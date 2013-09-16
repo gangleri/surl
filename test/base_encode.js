@@ -6,7 +6,7 @@ var base = require('../lib/base64'),
 var i = 0;
 [0,1,2,3,4,5,6,7,8,9].forEach(function(item){
   var encoded = base.encode(item);
-  assert.deepEqual(encoded, i, 
+  assert.deepEqual(encoded, i.toString(), 
     'Encoded value did not match expected.[encoded: ' + encoded + ' expected: ' + item + ']');
   i++;
 });
