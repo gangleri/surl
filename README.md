@@ -3,6 +3,8 @@ surl - NodeJS URL shortner
 
 A simple Node url shortner.
 
+[![build status](https://secure.travis-ci.org/gangleri/surl.png)](http://travis-ci.org/gangleri/surl)
+
 
 <a name="about"></a>
 About
@@ -21,7 +23,7 @@ See the [CONTRIBUTING.md](https://https://github.com/gangleri/surl/blob/master/C
 LevelUP is only possible due to the excellent work of the following contributors:
 
 <table><tbody>
-<tr><th align="left">Alan Bradley</th><td><a href="https://github.com/gangleri">GitHub/gangleri</a></td><td><a href="http://twitter.com/rvagg">Twitter/@gangleri_</a></td></tr>
+<tr><th align="left">Alan Bradley</th><td><a href="https://github.com/gangleri">GitHub/gangleri</a></td><td><a href="http://twitter.com/gangleri_">Twitter/@gangleri_</a></td></tr>
 <tr><th align="left">Eoin Brazil</th><td><a href="https://github.com/braz/">GitHub/braz</a></td><td><a href="http://twitter.com/eoinbrazil">Twitter/@eoinbrazil</a></td></tr>
 <tr><th align="left">Leo Moore</th><td><a href="https://github.com/leommoore">GitHub/leommoore</a></td><td><a href="http://twitter.com/leommoore">Twitter/@leommoore</a></td></tr>
 </tbody></table>
