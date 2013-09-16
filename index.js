@@ -13,7 +13,7 @@ function SUrl(dbName) {
   db = level(dbName || 'surldb');
   hooks(db);
 
-  db.hooks.pre(/^(?!.*(_maxId|https?:\/\/))/, function(change, add){
+  db.hooks.pre(/\d+/, function(change, add){
     add({type: 'put', key: '_maxId', value: maxId});
     add({type: 'put', key: change.value, value: change.key});
   });
