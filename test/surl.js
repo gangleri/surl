@@ -1,5 +1,5 @@
 var fs = require('fs'),
-    surl = require('../index')(__dirname + 'test-db'),
+    surl = require('../index')(__dirname + '/test-db'),
     assert = require('assert');
 
 assert.equal(fs.existsSync(__dirname + 'test-db'), true, 'Failed to create test db');
