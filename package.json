@@ -18,11 +18,12 @@
     "xtend": "~2.1.1"
   },
   "devDependencies": {
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "rimraf": "~2.2.2"
   },
   "author": "Alan Bradley, Eoin Brazil, Leo Moore",
   "scripts": {
-    "test": "set -e; rm -rf ./test-db; for t in test/*.js; do echo '***' $t '***'; node $t; done"
+    "test": "set -e; for t in test/*.js; do echo '***' $t '***'; node $t; done"
   },
   "license": "MIT",
   "bugs": {
