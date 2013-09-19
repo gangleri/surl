@@ -1,5 +1,5 @@
-var base = require('../lib/bijection')(),
-    assert = require('assert');
+var base = require('../lib/bijection')();
+var assert = require('assert');
 
 assert.deepEqual(base.decode('0'), 0);
 assert.deepEqual(base.decode('a'), 10);
