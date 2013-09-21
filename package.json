@@ -15,7 +15,8 @@
   "dependencies": {
     "level": "~0.16.0",
     "level-hooks": "~4.4.4",
-    "xtend": "~2.1.1"
+    "xtend": "~2.1.1",
+    "errno": "~0.1.0"
   },
   "devDependencies": {
     "underscore": "~1.5.2",
@@ -24,7 +25,7 @@
   },
   "author": "Alan Bradley, Eoin Brazil, Leo Moore",
   "scripts": {
-    "test": "set -e; for t in test/*.js; do echo '***' $t '***'; node $t; done"
+    "test": "tap ./test"
   },
   "license": "MIT",
   "bugs": {
