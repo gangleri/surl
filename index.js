@@ -2,6 +2,7 @@ var level = require('level');
 var hooks = require('level-hooks');
 var base64 = require('./lib/bijection')();
 var isValidUrl = require('./lib/validation').isValidUrl;
+var errors = require('./lib/errors');
 var db;
 var maxId;
 
@@ -18,27 +19,37 @@ function SUrl(dbName) {
     add({type: 'put', key: change.value, value: change.key});
   });
 
-  db.get('_maxId', {sync: true}, function(err, id){
+  db.get('_maxId', {sync: true}, function(err, id) {
     maxId = id || 0;
   });
 }
  
 SUrl.prototype.shorten = function(url, cb) {
-  db.get(url, function checkForExistingSortId(err, id) { 
-    if (err) {
-      if (err.name === 'NotFoundError') {
-        var s = base64.encode(maxId++);
-        db.put(s, url, function insertNewShortId(err) { 
-          cb(err, s);
-        });
+  if (isValidUrl(url)) { 
+    db.get(url, function checkForExistingSortId(err, id) { 
+      if (err) {
+        if (err.name === 'NotFoundError') {
+          var s = base64.encode(maxId++);
+          db.put(s, url, function insertNewShortId(err) { 
+            cb(null, s);
+          });
+        }
+      } else { 
+        cb(null, id);
       }
-    } else { 
-      cb(null, id);
-    }
-  });
+    });
+  } else {
+    cd(new errors.InValidUri('Invalid url [' + url + ']'), null); 
+  }
 }
 
 SUrl.prototype.resolve = function(id, cb) {
-  db.get(id, cb); 
+  db.get(id, function(err, url){
+    if (err) { 
+      cb(new errors.UnknownShortId('No url for [' + id + ']'), null);
+    } else { 
+      cb(null, url);
+    }
+  }); 
 }
 
