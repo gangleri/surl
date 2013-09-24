@@ -39,7 +39,7 @@ SUrl.prototype.shorten = function(url, cb) {
       }
     });
   } else {
-    cd(new errors.InValidUri('Invalid url [' + url + ']'), null); 
+    cb(new errors.InValidUri('Invalid url [' + url + ']'), null); 
   }
 }
 
