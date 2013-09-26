@@ -20,6 +20,7 @@ function SUrl(dbName) {
   });
 
   db.get('_maxId', {sync: true}, function(err, id) {
+    if(err && err.name !== 'NotFoundError') throw new errors.InitializationError();
     maxId = id || 0;
   });
 }
