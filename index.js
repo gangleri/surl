@@ -15,11 +15,11 @@ function SUrl(dbName) {
   hooks(db);
 
   db.hooks.pre(/\d+/, function regPreHooks(change, add) {
-    add({type: 'put', key: '_maxId', value: maxId});
+    add({type: 'put', key: '!maxId', value: maxId});
     add({type: 'put', key: change.value, value: change.key});
   });
 
-  db.get('_maxId', {sync: true}, function(err, id) {
+  db.get('!maxId', {sync: true}, function(err, id) {
     if(err && err.name !== 'NotFoundError') throw new errors.InitializationError();
     maxId = id || 0;
   });
