@@ -16,7 +16,7 @@ The surl module is maintained by Alan Bradley, Eoin Brazil and Leo Moore. It was
 <a name="contributing"></a>
 Contributing
 ------------
-See the [CONTRIBUTING.md](https://https://github.com/gangleri/surl/blob/master/CONTRIBUTING.md) file for more details.
+See the [CONTRIBUTING.md](https://github.com/gangleri/surl/blob/master/CONTRIBUTING.md) file for more details.
 
 ### Contributors
 
