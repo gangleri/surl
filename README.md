@@ -10,7 +10,7 @@ A simple Node url shortner.
 About
 -----
 
-The surl module is maintained by Alan Bradley, Eoin Brazil and Leo Moore. It was written at [NodeConfEU 2013](http://nodeconf.eu) with the help of numerous contributions from the open source community and conference attendees.
+The surl module is maintained by Alan Bradley, Eoin Brazil and Leo Moore. It was started at [NodeConfEU 2013](http://nodeconf.eu) with the help of numerous contributions from the open source community and conference attendees.
 
 
 <a name="contributing"></a>
@@ -20,7 +20,7 @@ See the [CONTRIBUTING.md](https://https://github.com/gangleri/surl/blob/master/C
 
 ### Contributors
 
-LevelUP is only possible due to the excellent work of the following contributors:
+surl is only possible due to the excellent work of the following contributors:
 
 <table><tbody>
 <tr><th align="left">Alan Bradley</th><td><a href="https://github.com/gangleri">GitHub/gangleri</a></td><td><a href="http://twitter.com/gangleri_">Twitter/@gangleri_</a></td></tr>
